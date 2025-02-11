@@ -1,52 +1,22 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int  main(){
+double A,B,C;
+double areaT,areaR,areaC,areaTr,areaQ;
+double pi = 3.14159;
+scanf("%lf %lf %lf",&A,&B,&C);
 
-# Linker output
-*.ilk
-*.map
-*.exp
+areaT = A * C/2.0;
+areaC = pi * (C*C);
+areaTr = (A + B)*C/2.0;
+areaQ = B * B;
+areaR = A * B;
 
-# Precompiled Headers
-*.gch
-*.pch
+printf("TRIANGULO: %.3lf\n",areaT);
+printf("CIRCULO: %.3lf\n",areaC);
+printf("TRAPEZIO: %.3lf\n",areaTr);
+printf("QUADRADO: %.3lf\n",areaQ);
+printf("RETANGULO: %.3lf\n",areaR);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+return 0;
+}
